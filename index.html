@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BMIApp</title>
+  <meta charset="utf-8">
+  <meta name="description" content="BMIApp">
+  <meta name="author" content="Kokako">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>BMIApp</h1>
+    <h2>An Intuitive Body Mass Index Calculator</h2>
+    <p>Kokako<br/>Data Scientist</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Why BMI?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Body mass index (BMI) is a simple calculation based on a person&#39;s height and weight that is used as a screening tool to identify possible weight issues in adults. It&#39;s key features:</p>
+
+<ol>
+<li>BMI has been shown to correlate strongly with body fat percentage, but is much easier and cheaper to implement than most body fat measurement techniques.</li>
+<li>This relationship means that ranges of BMI values can indicate the weight status of an individual (underweight, normal, overweight, or obese).</li>
+<li>BMI is easy for everyone, from doctors to the public, to calculate and understand. </li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Features of BMIApp</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>BMIApp takes a user&#39;s height (in feet and inches) and weight (in pounds) and calculates their BMI. In addition, it displays the weight status of the user predicted by their BMI.</p>
+
+<p>Example: Suppose I am 5&#39; 3&quot; and 120 lbs. I enter in my information and the following code is performed:</p>
+
+<pre><code class="r">bmi &lt;- round(weight / (height)^2 *703, digits=1)
+if(bmi&lt;18.5) {
+    weightstatus &lt;- &quot;underweight&quot;
+} else if(bmi&gt;=18.5 &amp; bmi&lt;=24.9) {
+    weightstatus &lt;- &quot;normal&quot;
+} else if(bmi&gt;=25.0 &amp; bmi&lt;=29.9) {
+    weightstatus &lt;- &quot;overweight&quot;
+} else {weightstatus &lt;- &quot;obese&quot;}
+</code></pre>
+
+<pre><code>## [1] &quot;Your BMI is 21.3 which means you are normal .&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Disclaimers</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Please note that the BMIApp is meant for simplifying the BMI calculation only, not for health assessment.</p>
+
+<p>Body mass index is meant as a screening tool only: it can indicate where there may be a problem with your weight, but only a healthcare professional can fully assess your overall health (of which weight is only one component).</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Resources</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Start using the BMIApp now! 
+<a href="https://kokako.shinyapps.io/Assignment/">Link to shinyApps</a></p>
+
+<p>Read about the Centers for Disease Control and Prevention&#39;s guidelines on BMI: 
+<a href="http://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/">CDC website</a></p>
+
+<p>Thank you for your support.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Why BMI?'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Features of BMIApp'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Disclaimers'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Resources'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+   
+  </html>
