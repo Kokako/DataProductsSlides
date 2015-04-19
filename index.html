@@ -68,13 +68,15 @@
 <p>Example: Suppose I am 5&#39; 3&quot; and 120 lbs. I enter in my information and the following code is performed:</p>
 
 <pre><code class="r">bmi &lt;- round(weight / (height)^2 *703, digits=1)
-if(bmi&lt;18.5) {
+## Threshold numbers from the CDC
+if(bmi &lt; 18.5) {
     weightstatus &lt;- &quot;underweight&quot;
-} else if(bmi&gt;=18.5 &amp; bmi&lt;=24.9) {
+} else if(bmi &gt;= 18.5 &amp; bmi &lt;= 24.9) {
     weightstatus &lt;- &quot;normal&quot;
-} else if(bmi&gt;=25.0 &amp; bmi&lt;=29.9) {
+} else if(bmi &gt;= 25.0 &amp; bmi &lt;= 29.9) {
     weightstatus &lt;- &quot;overweight&quot;
 } else {weightstatus &lt;- &quot;obese&quot;}
+print(paste(&quot;Your BMI is&quot;, bmi, &quot;which means you are&quot;, weightstatus, &quot;.&quot;))
 </code></pre>
 
 <pre><code>## [1] &quot;Your BMI is 21.3 which means you are normal .&quot;

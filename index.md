@@ -30,13 +30,15 @@ Example: Suppose I am 5' 3" and 120 lbs. I enter in my information and the follo
 
 ```r
 bmi <- round(weight / (height)^2 *703, digits=1)
-if(bmi<18.5) {
+## Threshold numbers from the CDC
+if(bmi < 18.5) {
     weightstatus <- "underweight"
-} else if(bmi>=18.5 & bmi<=24.9) {
+} else if(bmi >= 18.5 & bmi <= 24.9) {
     weightstatus <- "normal"
-} else if(bmi>=25.0 & bmi<=29.9) {
+} else if(bmi >= 25.0 & bmi <= 29.9) {
     weightstatus <- "overweight"
 } else {weightstatus <- "obese"}
+print(paste("Your BMI is", bmi, "which means you are", weightstatus, "."))
 ```
 
 ```
